@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class LadderController : MonoBehaviour
 {
+    public bool isLadder;
+    public bool isWaterfall;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             var player = collision.gameObject.GetComponent<PlayerController>();
-            //player.SuspendGravity();
-            player.SetGravity(20);
+            if (isLadder)
+            {
+               player.SuspendGravity();
+
+            }
+            if (isWaterfall)
+            {
+                player.SetGravity(20);
+            }
             
         }
     }
