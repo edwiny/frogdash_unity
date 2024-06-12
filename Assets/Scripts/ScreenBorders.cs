@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ScreenBorders
@@ -30,5 +31,14 @@ public class ScreenBorders
 
         width = bottomRight.x - bottomLeft.x;
         height = topLeft.y - bottomLeft.y;
+    }
+
+    public bool IsOffScreen(Vector2 position, float threshold)
+    {
+        if (position.x > (bottomLeft.x - threshold) && position.x < (bottomRight.x + threshold) &&
+            position.y > (bottomLeft.y - threshold) && position.y < (topLeft.y + threshold)) {
+            return false;
+        }
+        return true;
     }
 }

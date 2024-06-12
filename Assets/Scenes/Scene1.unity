@@ -2532,7 +2532,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1280908118, guid: 7a65e726a15eab249b6e771c7eba5e8a, type: 3}
       - {fileID: -431640697, guid: 7a65e726a15eab249b6e771c7eba5e8a, type: 3}
-      m_AnimationSpeed: 3.165595
+      m_AnimationSpeed: 2.8398476
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -7, y: -2, z: 0}
@@ -2586,7 +2586,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1280908118, guid: 7a65e726a15eab249b6e771c7eba5e8a, type: 3}
       - {fileID: -431640697, guid: 7a65e726a15eab249b6e771c7eba5e8a, type: 3}
-      m_AnimationSpeed: 3.5094147
+      m_AnimationSpeed: 7.1752195
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -7, y: 3, z: 0}
@@ -2706,7 +2706,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 1280908118, guid: 7a65e726a15eab249b6e771c7eba5e8a, type: 3}
       - {fileID: -431640697, guid: 7a65e726a15eab249b6e771c7eba5e8a, type: 3}
-      m_AnimationSpeed: 2.5084252
+      m_AnimationSpeed: 6.8095512
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -7, y: 10, z: 0}
@@ -3203,7 +3203,7 @@ MonoBehaviour:
   inputActionAsset: {fileID: -944628639613478452, guid: 13fb52494c8c99947b903286722617b3, type: 3}
   jumpHeight: 4
   upGravityScale: 9
-  downGravityScale: 5
+  downGravityScale: 3
   startingMaxJumps: 5
   startingJumpRegenerationRate: 1
   speed: 5

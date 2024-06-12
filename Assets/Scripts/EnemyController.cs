@@ -106,21 +106,23 @@ public class EnemyController : MonoBehaviour
 
         if (now > nextMobilityCheck)
         {
+            screenBorders.CalculateScreenBorders();
             nextMobilityCheck = now + 1;
             movementHistory.Enqueue(transform.position);
             if (movementHistory.Count > NUM_MOVEMENT_HISTORY) {
                 movementHistory.Dequeue();
             }
-            if (!IsMobile())
+            if (screenBorders.IsOffScreen(transform.position, 1) && !IsMobile())
             {
                 collider.enabled = false;
+                Debug.Log("Disabling enemy collider");
                 restoreColliderTimer = now + 1;
             }
         }
-        if(now > restoreColliderTimer)
+        if(collider.enabled == false && now > restoreColliderTimer)
         {
             Debug.Log("Restoring Collider");
-            collider.enabled = true;
+            //collider.enabled = true;
         }
 
     }

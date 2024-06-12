@@ -64,9 +64,13 @@ public class PlayerController : MonoBehaviour
 
     public void SuspendGravity()
     {
-        Debug.Log("Player: gravity suspended!");
         gravitySuspended = true;
         rb.gravityScale = 0.1f;
+    }
+
+    public void SetGravity(float gravity)
+    {
+        rb.gravityScale = gravity;
     }
 
 

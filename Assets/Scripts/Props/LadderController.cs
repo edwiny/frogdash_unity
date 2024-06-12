@@ -9,7 +9,9 @@ public class LadderController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             var player = collision.gameObject.GetComponent<PlayerController>();
-            player.SuspendGravity();
+            //player.SuspendGravity();
+            player.SetGravity(20);
+            
         }
     }
 
