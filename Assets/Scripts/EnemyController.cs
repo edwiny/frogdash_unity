@@ -119,11 +119,25 @@ public class EnemyController : MonoBehaviour
                 restoreColliderTimer = now + 1;
             }
         }
+
+        //TODO: Remove
         if(collider.enabled == false && now > restoreColliderTimer)
         {
             Debug.Log("Restoring Collider");
-            //collider.enabled = true;
+            collider.enabled = true;
         }
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Enemy: something collided with me" + collision.gameObject);
+        var player = collision.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            player.AcceptHit();
+        }
+
+    }
+
 }
+

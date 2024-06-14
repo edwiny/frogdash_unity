@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: frog_sheet_Frame_0
     originalName: 
-    pivot: {x: 0.51724136, y: -0.035714287}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 39
-      width: 29
-      height: 28
+      x: 4
+      y: 78
+      width: 32
+      height: 27
     spriteID: a1123e4e02a526d49bbd72c839268692
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 39}
+    uvTransform: {x: 4, y: 78}
   - name: frog_sheet_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.037037037}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 4
+      x: 4
+      y: 42
       width: 32
-      height: 27
+      height: 28
     spriteID: 8fc0ae6cc83eaf843a7403b13e435b8c
     spriteBone: []
     spriteOutline: []
@@ -160,28 +160,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
+    uvTransform: {x: 4, y: 42}
   - name: frog_sheet_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 84
-      width: 32
-      height: 31
-    spriteID: ae1a4ab7a7dd9674dad21ffcdd4c4241
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
-  - name: frog_sheet_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -191,8 +171,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 32
-      height: 32
-    spriteID: 8f64d85f74a40b046975e81395191440
+      height: 30
+    spriteID: ae1a4ab7a7dd9674dad21ffcdd4c4241
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,46 +181,6 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: frog_sheet_Frame_4
-    originalName: 
-    pivot: {x: 0.516129, y: -0.04347826}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 44
-      y: 75
-      width: 31
-      height: 23
-    spriteID: 537a8c865d157f143b6b1ecc503a0827
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 44, y: 75}
-  - name: frog_sheet_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 44
-      width: 32
-      height: 32
-    spriteID: 8d49a4ccc224055498e2b44246ff768b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -253,51 +193,27 @@ ScriptedImporter:
     - name: frog_sheet_Frame_0
       frameIndex: 0
       cellRect:
-        x: 1
-        y: 1
-        width: 29
-        height: 28
+        x: 0
+        y: 0
+        width: 32
+        height: 27
       spriteId: a1123e4e02a526d49bbd72c839268692
     - name: frog_sheet_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 27
+        height: 28
       spriteId: 8fc0ae6cc83eaf843a7403b13e435b8c
     - name: frog_sheet_Frame_2
       frameIndex: 2
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 30
       spriteId: ae1a4ab7a7dd9674dad21ffcdd4c4241
-    - name: frog_sheet_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: 8f64d85f74a40b046975e81395191440
-    - name: frog_sheet_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 0
-        y: 1
-        width: 31
-        height: 23
-      spriteId: 537a8c865d157f143b6b1ecc503a0827
-    - name: frog_sheet_Frame_5
-      frameIndex: 5
-      cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: 8d49a4ccc224055498e2b44246ff768b
     linkedCells: []
     parentIndex: -1
   platformSettings: []

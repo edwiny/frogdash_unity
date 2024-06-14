@@ -40,6 +40,17 @@ public class PlayerController : MonoBehaviour
     //Animation
     Animator animator;
 
+    //Audio
+    AudioSource audioSource;
+
+    public AudioClip audioClipJump1;
+    public AudioClip audioClipJump2;
+    public AudioClip audioClipJump3;
+    public AudioClip audioClipLand;
+    public AudioClip audioClipDie;
+
+
+
 
 
     private void Awake()
@@ -59,6 +70,8 @@ public class PlayerController : MonoBehaviour
         numJumpsRemaining = maxJumps;
         jumpRegenerationRate += startingJumpRegenerationRate;
         nextJumpRegenerationTick = Time.deltaTime + jumpRegenerationRate;
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -87,6 +100,18 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Jumping - jumps remaining: " + numJumpsRemaining);
 
+            AudioClip jumpclip = audioClipJump1;
+
+            if (numJumpsRemaining == 1)
+            {
+                jumpclip = audioClipJump3;
+
+            } else if (numJumpsRemaining == 2)
+            {
+                jumpclip = audioClipJump2;
+            }
+            audioSource.PlayOneShot(jumpclip);
+
             //rb.AddForce(new Vector2(rb.velocity.x, 5.0f), ForceMode2D.Impulse);
             float jumpForce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -102,6 +127,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (immobile) return;
         move = moveAction.ReadValue<Vector2>();
         rb.velocity = new Vector2(move.x * speed, rb.velocity.y);
         animator.SetFloat("velocity_x", directionFacing);
@@ -116,8 +142,8 @@ public class PlayerController : MonoBehaviour
                 numJumpsRemaining++;
             }
         }
-    }
 
+    }
     void FixedUpdate()
     {
         if (immobile) return;
@@ -161,6 +187,12 @@ public class PlayerController : MonoBehaviour
 
 
 
+    }
+
+    public void AcceptHit()
+    {
+        immobile = true;
+        animator.SetTrigger("hit");
     }
 
 
